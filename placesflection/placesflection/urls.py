@@ -20,7 +20,7 @@ from django.views.generic import TemplateView
 
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="placeflection/index.html")),
+    path("", TemplateView.as_view(template_name="placesflection/index.html")),
     path("", include("social_django.urls", namespace="social")),
     path("memories/", include("memories.urls")),
     path("admin/", admin.site.urls),

@@ -55,7 +55,7 @@ ROOT_URLCONF = "placesflection.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "placeflection" / "templates"],
+        "DIRS": [BASE_DIR / "placesflection" / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
