@@ -9,6 +9,7 @@ django-location-field = "*"
 python-decouple = "*"
 social-auth-core = {git = "https://github.com/python-social-auth/social-core"}
 social-auth-app-django = "*"
+gunicorn = "*"
 
 [dev-packages]
 black = "*"
