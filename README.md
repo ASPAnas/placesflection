@@ -62,6 +62,7 @@ The application is written in [Python 3](https://github.com/python) and [Django]
 - django: web framework for the whole project.
 - django-location-field: location field type and frontend.
 - python-decouple: convenient configuration.
+- social-auth-app-django: social auth.
 
 #### Dev dependencies
 
