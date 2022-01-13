@@ -1,0 +1,12 @@
+{% extends "memories/base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h2>{{ memory.title }}</h2>
+    <p>{{ memory.description }}</p>
+    {{ memory.location.widget }}
+</div>
+
+{% endblock %}
+
