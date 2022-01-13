@@ -55,7 +55,15 @@ pipenv run ./manage.py runserver
 
 The application is written in [Python 3](https://github.com/python) and [Django](https://github.com/django/django), using [pipenv](https://github.com/pypa/pipenv) for package management and [black](https://github.com/psf/black) as a code formatter.
 
-### Libs
+### Libraries
+
+- django: web framework for the whole project.
+- django-location-field: location field type and frontend.
+- python-decouple: convenient configuration.
+
+#### Dev dependencies
+
+- black: python code formatter.
 
 ## License
 

@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 django = "*"
+django-location-field = "*"
+python-decouple = "*"
 
 [dev-packages]
 black = "*"
