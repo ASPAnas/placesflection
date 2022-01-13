@@ -6,7 +6,7 @@ from location_field.models.plain import PlainLocationField
 class Memory(models.Model):
     """Single place memory representation."""
 
-    owner = models.OneToOneField(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
     description = models.TextField()
     location = PlainLocationField(based_fields=["city"], zoom=7)
