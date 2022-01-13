@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "crispy_forms",
     "location_field.apps.DefaultConfig",
     "social_django",
 ]
@@ -140,3 +141,5 @@ AUTHENTICATION_BACKENDS = (
 )
 SOCIAL_AUTH_VK_OAUTH2_KEY = config("VK_OAUTH2_KEY")
 SOCIAL_AUTH_VK_OAUTH2_SECRET = config("VK_OAUTH2_SECRET")
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

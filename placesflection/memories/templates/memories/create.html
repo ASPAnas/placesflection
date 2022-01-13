@@ -1,13 +1,18 @@
-{% extends "memories/base.html" %}
+{% extends "placeflection/base.html" %}
+{% load crispy_forms_tags %}
 
 {% block header_libs %}
-    {{ form.media }}
+{{ form.media }}
 {% endblock %}
 
 {% block content %}
 
 <div class="container">
-    {{ form }}
+    <form method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <button type="submit" class="btn btn-success mt-3">Create</button>
+    </form>
 </div>
 
 {% endblock %}

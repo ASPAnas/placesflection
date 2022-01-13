@@ -2,10 +2,9 @@ from typing import Text
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 from django.http import HttpRequest
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect, reverse
 from .forms import MemoryForm
 from .models import Memory
-from django.views.generic import CreateView
 
 MEMORIES_PAGE_SIZE = 30
 
@@ -43,7 +42,10 @@ def create(request: HttpRequest):
     if request.method == "POST":
         form = MemoryForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            memory = form.save(commit=False)
+            memory.owner = request.user
+            memory.save()
+            return redirect(reverse("list"))
     else:
         form = MemoryForm()
     return render(request, "memories/create.html", {"form": form})

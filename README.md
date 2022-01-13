@@ -63,6 +63,7 @@ The application is written in [Python 3](https://github.com/python) and [Django]
 - django-location-field: location field type and frontend.
 - python-decouple: convenient configuration.
 - social-auth-app-django: social auth.
+- django-crispy-forms: to properly display forms with bootstrap.
 
 #### Dev dependencies
 
