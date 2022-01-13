@@ -48,8 +48,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "social_django.context_processors.backends",
-    "social_django.context_processors.login_redirect",
 ]
 
 ROOT_URLCONF = "placesflection.urls"
@@ -65,6 +63,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "social_django.context_processors.backends",
+                "social_django.context_processors.login_redirect",
             ],
         },
     },
@@ -180,3 +180,5 @@ SOCIAL_AUTH_VK_OAUTH2_KEY = config("VK_OAUTH2_KEY")
 SOCIAL_AUTH_VK_OAUTH2_SECRET = config("VK_OAUTH2_SECRET")
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+LOGIN_REDIRECT_URL = "/"
