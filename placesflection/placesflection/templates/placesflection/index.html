@@ -4,7 +4,8 @@
 
 <div class="container">
     {% if user.is_authenticated %}
-        <h2>Welcome, {{ user }}</h2>
+        <h2>Welcome, {{user.usersocialmetadata.full_name }}, </h2>i
+        <img src="{{ user.usersocialmetadata.picture }}" class="img-fluid" alt="Responsive image">
     {% else %}
         <a href="{% url "social:begin" "vk-oauth2" %}">Authorize via VK</a> to start using service.
     {% endif %}

@@ -10,5 +10,6 @@ def update_user_social_metadata(strategy, *args, **kwargs):
     if response.get("user_photo"):
         metadata = UserSocialMetadata()
         metadata.user = user
+        metadata.full_name = f"{response.get('first_name')} {response.get('last_name')}"
         metadata.picture = response["user_photo"]
         metadata.save()

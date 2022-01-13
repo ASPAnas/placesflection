@@ -19,4 +19,5 @@ class UserSocialMetadata(models.Model):
     """User metadata pulled from the social networks."""
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    full_name = models.CharField(max_length=255, null=True, blank=True)
     picture = models.TextField(null=True, blank=True)
