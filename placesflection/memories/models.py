@@ -13,3 +13,10 @@ class Memory(models.Model):
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+
+class UserSocialMetadata(models.Model):
+    """User metadata pulled from the social networks."""
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    picture = models.TextField(null=True, blank=True)
