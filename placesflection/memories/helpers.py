@@ -1,8 +1,11 @@
 from .models import UserSocialMetadata
 
 
-def update_user_social_metadata(strategy, *args, **kwargs):
+def update_user_social_metadata(strategy, *args, is_new=False, **kwargs):
     """Updates user social metadata based on api response."""
+    if not is_new:
+        return
+
     response = kwargs["response"]
     backend = kwargs["backend"]
     user = kwargs["user"]
